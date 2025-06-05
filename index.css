@@ -1,0 +1,68 @@
+#container { /* 網頁主容器設定 */
+	background-color: #FEBC8A; /* 背景顏色為淡橘色 */
+	width: 900px; /* 寬度設定為900像素 */
+	margin-left: auto; /* 左邊外距自動，讓容器置中 */
+	margin-right: auto; /* 右邊外距自動，讓容器置中 */
+	padding: 8px; /* 四邊內距為8像素 */
+}
+
+.td01 { /* 表格中特定儲存格的樣式 */
+	background: linear-gradient(to bottom, #FFCA7D 0%, #EE8E00 40%); /* 垂直漸層背景從亮橘到深橘 */
+	font-size: 25px;
+	font-weight: bolder; /* 字體加粗 */
+	color: #000000;
+	text-align: center; /* 字置中 */
+}
+
+#nav { /* 側邊導覽列設定 */
+	background-color: #F4F842; /* 背景顏色為黃色 */
+	width: 100px; /* 寬度為100像素 */
+	float: left; /* 定位到左邊 */
+}
+
+.nav01 { /* 導覽列樣式 */
+	padding-left: 25px; /* 左邊內距25像素 */
+	padding-top: 10px; /* 上方內距10像素 */
+	padding-bottom: 10px; /* 下方內距10像素 */
+}
+
+#content { /* 主要內容 */
+	background-color: #fff; /* 背景顏色為白色 */
+	width: 740px; /* 寬度為740像素 */
+	float: left; /* 定位到左邊（與 nav 並列） */
+	padding: 30px; /* 四邊內距為30像素 */
+}
+
+#frontpage { /* 首頁容器 */
+	width: 800px; /* 寬度為800像素 */
+	float: left; /* 定位到左邊 */
+}
+
+a:link { /* 超連結 */
+	color: #EE0000;
+	text-decoration: none; /* 去除底線 */
+}
+
+a:hover { /* 滑鼠懸停時的超連結 */
+	color: #000;
+	text-decoration: none;
+}
+
+body { /* 整個網頁背景*/
+	background: orange; /*背景顏色*/
+}
+
+h3 { /* 第三層標題樣式設定 */
+	background: linear-gradient(to bottom, #FFCA7D 0%, #EE8E00 50%); /* 漸層背景 */
+	background-repeat: repeat-y; /* 背景圖在垂直方向重複 */
+	padding-left: 20px; /* 左內距20像素 */
+	padding-top: 10px; /* 上內距10像素 */
+	padding-bottom: 10px; /* 下內距10像素 */
+	color: #000000; /* 字體顏色黑色 */
+}
+
+#container::after { /* 為 id="container" 的元素設定一個偽元素（插入在內容結尾） */
+  content: ""; /* 建立一個內容為空字串的偽元素，這是讓偽元素真正出現在頁面上的關鍵 */
+  display: table; /* 將這個偽元素設定為 table 顯示類型，可讓其具有區塊屬性並撐起高度 */
+  clear: both; /* 清除左右兩邊的浮動，確保這個偽元素能夠出現在浮動元素下方 */
+}
